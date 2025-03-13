@@ -1,0 +1,21 @@
+/*.container{
+    width: 700px;
+    height: 500px;
+    background-color:red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container div{
+    margin: 20px;
+}
+.foodMain input{
+    width: 30rem;
+}
+.foodSecondary input{
+    width: 15rem;
+}*/
+table, th, td {
+    border: 1px solid black;
+  }
