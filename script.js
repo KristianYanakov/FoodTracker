@@ -21,3 +21,5 @@ $("#addFood").click(function(){
     addFood()
     
 })
+
+console.log("TEST LOG FOR GITHUB")
