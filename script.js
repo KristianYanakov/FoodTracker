@@ -36,10 +36,13 @@ var addFood = function(){
     console.log("Calories: " + calories + " protein: " + protein + " carbs: " + carbs + " fat: " + fat)
     console.log("\n")
 
-    //check if marked as breakfast lunch or dinner and add a class to the <tr> with background color corresponding - lighgreen etc
-    $(".foodLog").append("<tr><td>" + foodName + "</td> <td>" + quantity + "</td> <td>" + calories + "</td> <td>" + protein + "</td> <td>" + carbs + "</td> <td>" + fat + "</td></tr>")
+
     
     entries.push(new Entry(foodName, quantity, calories, protein, carbs, fat))
+    //check if marked as breakfast lunch or dinner and add a class to the <tr> with background color corresponding - lighgreen etc
+    //$(".foodLog").append("<tr><td>" + foodName + "</td> <td>" + quantity + "</td> <td>" + calories + "</td> <td>" + protein + "</td> <td>" + carbs + "</td> <td>" + fat + "</td></tr>")
+    $(".foodLog tbody").append("<tr><th scope = 'row'>"+entries.length+"</th> <td>"+ foodName +"</td> <td>"+ quantity +"</td> <td>"+ calories +"</td> <td>"+ protein +"</td> <td>"+ carbs +"</td> <td>"+ fat +"</td> </tr>")
+    
 }
 
 $("#addFood").click(function(){
