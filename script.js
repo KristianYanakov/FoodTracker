@@ -15,7 +15,7 @@ class Entry{
 }
 
 let entries = []
-let dailyMacros = {calories: 3000, protein: 180, carbs: 400, fat: 100}
+let dailyMacros = {calories: 3000, protein: 187, carbs: 375, fat: 83}
 let macros = {calories: 0, protein: 0, carbs: 0, fat: 0}
 let currProcent = 0
 
@@ -27,10 +27,10 @@ var addFood = function(){
     let carbs = $("#carbs").val()
     let fat = $("#fat").val()
     
-    /*if(foodName === "" && foodName == null && quantity === "" && quantity == null && calories === "" && calories == null && protein === "" && protein == null && carbs === "" && carbs == null && fat === "" && fat != null){
+    if (!foodName || !quantity || !calories || !protein || !carbs || !fat){
         console.log("NULL OR EMPTY")
         return "Null or empty value!"
-    }*/
+    }
 
     console.log("FoodName: " + foodName + " quantity: " + quantity)
     console.log("Calories: " + calories + " protein: " + protein + " carbs: " + carbs + " fat: " + fat)
@@ -51,6 +51,7 @@ var addFood = function(){
     macros.fat += Number(fat)
 
     $("#calorieText p").html(macros.calories + "/" + dailyMacros.calories + " kcal");  //macros.calories + "/"+ dailyMacros.calories + "kcal")
+    //    $("#calorieText p").html(macros.calories + "/" + dailyMacros.calories + " kcal<br>" + macros.carbs + "/" + dailyMacros.carbs + " gr<br>" + macros.protein + "/" + dailyMacros.protein + " gr<br>" + macros.fat + "/" + dailyMacros.fat + " gr<br>");  //macros.calories + "/"+ dailyMacros.calories + "kcal")
 
     
     currProcent = (macros.calories / dailyMacros.calories) * 100;
@@ -82,3 +83,8 @@ function logEntries(){
 
 //SAVE INTO TXT FILES WITH THE CURR DATE AND RESULTS
 
+$("#saveButton").click(function(){
+    //
+    alert("asd")
+    
+})
